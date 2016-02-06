@@ -1,0 +1,43 @@
+<%= form_for(@patient, html: { class: "pure-form pure-form-aligned" }) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset>
+    <div class="pure-control-group">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </div>
+    <div class="pure-control-group">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="pure-control-group">
+      <%= f.label :ur_number %>
+      <%= f.text_field :ur_number %>
+    </div>
+    <div class="pure-control-group">
+      <%= f.label :medicare %>
+      <%= f.text_field :medicare %>
+    </div>
+    <div class="pure-control-group">
+      <%= f.label :credit_card %>
+      <%= f.text_field :credit_card %>
+    </div>
+    <div class="pure-control-group">
+      <%= f.label :notes %>
+      <%= f.text_area :notes %>
+    </div>
+    <div class="pure-controls actions">
+      <%= f.submit class: "pure-button pure-button-primary" %>
+    </div>
+  </fieldset>
+<% end %>

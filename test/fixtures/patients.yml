@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: patients
+#
+#  id                 :integer          not null, primary key
+#  first_name         :string(255)
+#  last_name          :string(255)
+#  ur_number          :string(255)
+#  medicare           :string(255)
+#  credit_card        :string(255)
+#  notes              :text
+#  created_at         :datetime
+#  updated_at         :datetime
+#  masked_credit_card :string(255)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  ur_number: MyString
+  medicare: MyString
+  credit_card: MyString
+  notes: MyText
+
+two:
+  first_name: MyString
+  last_name: MyString
+  ur_number: MyString
+  medicare: MyString
+  credit_card: MyString
+  notes: MyText
